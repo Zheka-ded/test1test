@@ -1,14 +1,10 @@
-/* #map{
-    width: 100%;
-    min-height: 300px;
-} */
 
 *{
     box-sizing: border-box;
     margin: 0 auto;
 }
 
-body{
+.content{
     padding: 0 16px;
 }
 
@@ -46,6 +42,7 @@ body{
 .btn__wrap label input{
     border: none;
     outline: none;
+    -webkit-appearance: none;
     cursor: pointer;
 }
 
@@ -62,17 +59,19 @@ body{
     vertical-align: text-top;
 }
 
-.title__text, .subtitle__text{
+.subtitle__text{
     font-size: 16px;
     font-family: "OpenSans";
     color: rgb(51, 51, 51);
-    line-height: 1.2;
+    line-height: 1.5;
     text-align: center;
 }
 
-.subtitle__text{
-    line-height: 1.5;
+a{
+    display: block;
+    color: black;
 }
+
 
 .subtitle{
     height: 0px;
@@ -95,4 +94,30 @@ body{
     margin: 8px auto;
 }
 
-  
+@media (min-width: 740px) {
+    .content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .map{
+        order: 1;
+        margin: 0px 8px;
+    }
+
+    .subtitle{
+        width: 340px;
+    }
+}
+
+@media (min-width: 960px){
+
+    .content{
+        width: 950px;
+    }
+
+    .subtitle{
+        width: 450px;
+    }
+}
